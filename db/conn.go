@@ -22,13 +22,5 @@ func ConnectDB() (*sql.DB, error) {
 		panic(err)
 	}
 
-	err = db.Ping()
-
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println("Connected to " + dbname)
-
 	return db, nil
 }
